@@ -45,7 +45,17 @@ export default {
         postcss({
           extensions: ['.css','.less'],
           plugins:[
-            postcssImport()
+            postcssImport({
+              resolve(id){
+                console.log(`here is${id}`)
+                if(id.startsWith('@/')){
+                  const resolvedPath = resolvePath('./src/' + id.slice(2));
+                  console.log(`Resolving @ path: ${id} -> ${resolvedPath}`);
+                  return resolvedPath;
+                }
+                return resolvePath(id)
+              }
+            })
           ],
           use:[
             ['less',{

@@ -1,0 +1,42 @@
+{
+  "name": "sdkDemo",
+  "version": "1.0.0",
+  "description": "SDKDemo",
+  "author": "ly",
+  "types": "dist/index.d.ts",
+  "license": "ISC",
+  "main": "dist/sdk.umd.js",
+  "module": "dist/sdk.esm.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production npm run clean && rollup  -c --verbose rollup.config.js --bundleConfigAsCjs",
+    "clean": "rimraf ./dist"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/plugin-transform-runtime": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.26.0",
+    "@babel/runtime": "^7.26.0",
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-image": "^3.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "less": "^4.2.1",
+    "postcss": "^8.4.49",
+    "postcss-import": "^16.1.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.29.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "rollup-plugin-vue": "^6.0.0"
+  },
+  "dependencies": {
+    "typescript": "^5.7.2",
+    "vue": "^3.5.13"
+  }
+}

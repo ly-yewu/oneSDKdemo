@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "allowJs": true,
+    "lib": ["dom", "esnext"],
+    "types": ["vue"]//TypeScript 才能正确识别 Vue 的类型声明
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue","shims-vue.d.ts"],
+  "exclude": [
+    "node_modules"
+  ]
+}
